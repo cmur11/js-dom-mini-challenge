@@ -47,7 +47,7 @@ Figure out what you need to change to give Javascript access to the `h1#header` 
 
 **YOUR NOTES**
 ```
-
+defer needs to be added to script so the html finishes loading prior to javascript running
 ```
 ___________
 
