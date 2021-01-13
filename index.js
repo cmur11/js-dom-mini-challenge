@@ -9,9 +9,9 @@ header.style.color = "blue";
 
 /***** Deliverable 3 *****/
 console.log('This is what the traveler object looks like: ', traveler)
-const h2traveler = document.querySelector("body h2")
-h2traveler.textcontent = "Raffi"
-console.log("h2traveler")
+const h2 = document.querySelector("div.traveler h2")
+h2.textcontent = "Raffi"
+console.log("h2")
 /***** Deliverable 4 *****/
 
 
