@@ -9,8 +9,9 @@ header.style.color = "blue";
 
 /***** Deliverable 3 *****/
 console.log('This is what the traveler object looks like: ', traveler)
+let raffi = traveler.name
 const h2 = document.querySelector("div.traveler h2")
-h2.innerHTML = "Raffi"
+h2.innerText = raffi
 
 let travelerNickname = document.querySelector('div.traveler em')
 travelerNickname.innerText = "Riff Raff"
@@ -21,14 +22,30 @@ img.alt = "Conor"
 
 /***** Deliverable 4 *****/
 let animals = document.querySelector('div.traveler ul')
+let animalSightings = traveler["animalSightings"]
 for (let i = 0; i < 3; i++) {
-    let li = document.createElement('li')
-    let p = document.createElement('p')
-    p.innerHTML = ("animal sighting description")
-    animals.appendChild(li)
+    let li = document.createElement("li") 
+    li.setAttribute('data-id', animalSightings[i].id)
+    let p = document.createElement("p")
+    let a = document.createElement("a")
+    p.innerText = animalSightings[i].description
+    let img = document.createElement('img')
+    img.src = animalSightings[i].photo
+    img.alt = animalSightings[i].species
+    a.href = animalSightings[i].link
+    a.target = "_blank"
+    a.innerText = `Here's a video about the ${animalSightings[i].species} species`
+    animals.append(li)
+    li.append(p)
+    li.append(img)
+    li.append(a)
   }
   
 //   animals.appendChild(ul) 
 
 
 /***** Deliverable 5 *****/
+// let banimalsdy = document.querySelector('animals')
+let idToRemove = document.querySelector('[data-id="3"]')
+idToRemove.remove()
+// toRemove.remove
